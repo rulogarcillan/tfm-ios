@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pet.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="9sw-Dm-KKX">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pet" translatesAutoresizingMaskIntoConstraints="NO" id="9sw-Dm-KKX">
                                 <rect key="frame" x="0.0" y="44" width="414" height="618"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ab-2R-VgR" customClass="MDCButton">
@@ -77,8 +77,9 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
-                                    <tabBarItem systemItem="favorites" id="l9h-q3-PBv"/>
-                                    <tabBarItem systemItem="more" id="IBK-K2-1GB"/>
+                                    <tabBarItem title="Home" image="Home" id="l9h-q3-PBv"/>
+                                    <tabBarItem title="Messages" image="Messages" id="YJj-ye-GB7" userLabel="Messages"/>
+                                    <tabBarItem title="Profile" image="Profile" id="IBK-K2-1GB"/>
                                 </items>
                             </tabBar>
                         </subviews>
@@ -92,6 +93,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="pet.jpg" width="715" height="1067"/>
+        <image name="Home" width="21.333333969116211" height="21.333333969116211"/>
+        <image name="Messages" width="42.666667938232422" height="42.666667938232422"/>
+        <image name="Profile" width="10.666666984558105" height="10.666666984558105"/>
+        <image name="pet" width="715" height="1067"/>
     </resources>
 </document>
