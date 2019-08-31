@@ -12,5 +12,6 @@ target 'adoptme' do
   pod 'Firebase/Firestore'
   pod 'GoogleSignIn'
   pod 'Firebase/Analytics'
+  pod 'SDWebImage', '~> 4.0'
 
 end

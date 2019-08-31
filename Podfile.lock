@@ -169,6 +169,9 @@ PODS:
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
   - Protobuf (3.9.0)
+  - SDWebImage (4.4.7):
+    - SDWebImage/Core (= 4.4.7)
+  - SDWebImage/Core (4.4.7)
 
 DEPENDENCIES:
   - Firebase/Analytics
@@ -176,6 +179,7 @@ DEPENDENCIES:
   - Firebase/Firestore
   - GoogleSignIn
   - MaterialComponents/Buttons
+  - SDWebImage (~> 4.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -205,6 +209,7 @@ SPEC REPOS:
     - MDFTextAccessibility
     - nanopb
     - Protobuf
+    - SDWebImage
 
 SPEC CHECKSUMS:
   AppAuth: bce82c76043657c99d91e7882e8a9e1a93650cd4
@@ -233,7 +238,8 @@ SPEC CHECKSUMS:
   MDFTextAccessibility: 85c09a1bd9c321f494348e632a25063bcda35a53
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   Protobuf: 1097ca58584c8d9be81bfbf2c5ff5975648dd87a
+  SDWebImage: c10d14a8883ebd89664f02a422006f66a85c0c5d
 
-PODFILE CHECKSUM: 324d51c3daeb6ce9b5bd8a6726c7c32ef2c1ca13
+PODFILE CHECKSUM: b5fba5d47efaf5331831cf2f402b46a8f0396906
 
 COCOAPODS: 1.7.5

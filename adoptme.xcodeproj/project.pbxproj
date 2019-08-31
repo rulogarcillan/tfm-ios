@@ -17,6 +17,7 @@
 		8A6AA39D231AC935004CB118 /* UserDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6AA39C231AC935004CB118 /* UserDto.swift */; };
 		8A6AA3A0231AC9EE004CB118 /* UserMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6AA39F231AC9EE004CB118 /* UserMapper.swift */; };
 		8A6AA3A2231ACE50004CB118 /* UserDtoExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6AA3A1231ACE50004CB118 /* UserDtoExt.swift */; };
+		8A6AA3B9231AF28C004CB118 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6AA3B8231AF28C004CB118 /* ProfileViewController.swift */; };
 		D246481AEFD22B1167F0C2BF /* Pods_adoptme.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D6DBF4F06DB98531653D851 /* Pods_adoptme.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		8A6AA39C231AC935004CB118 /* UserDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDto.swift; sourceTree = "<group>"; };
 		8A6AA39F231AC9EE004CB118 /* UserMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMapper.swift; sourceTree = "<group>"; };
 		8A6AA3A1231ACE50004CB118 /* UserDtoExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDtoExt.swift; sourceTree = "<group>"; };
+		8A6AA3B8231AF28C004CB118 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		BFB5ECE79A46AE006364D37F /* Pods-adoptme.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-adoptme.debug.xcconfig"; path = "Target Support Files/Pods-adoptme/Pods-adoptme.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,6 +117,7 @@
 			children = (
 				8A6AA37E2319A3D2004CB118 /* LoginController.swift */,
 				8A6AA398231AACFA004CB118 /* TabController.swift */,
+				8A6AA3B8231AF28C004CB118 /* ProfileViewController.swift */,
 			);
 			path = viewcontroller;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				8A6AA37F2319A3D2004CB118 /* LoginController.swift in Sources */,
 				8A6AA3A0231AC9EE004CB118 /* UserMapper.swift in Sources */,
 				8A6AA399231AACFA004CB118 /* TabController.swift in Sources */,
+				8A6AA3B9231AF28C004CB118 /* ProfileViewController.swift in Sources */,
 				8A6AA39D231AC935004CB118 /* UserDto.swift in Sources */,
 				8A6AA37D2319A3D2004CB118 /* AppDelegate.swift in Sources */,
 			);
