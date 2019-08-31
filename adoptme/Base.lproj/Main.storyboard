@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait">
+    <device id="retina6_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -18,24 +18,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pet.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="9sw-Dm-KKX">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pet.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="9sw-Dm-KKX">
                                 <rect key="frame" x="0.0" y="44" width="414" height="618"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="illustration_curved_top_login.png" translatesAutoresizingMaskIntoConstraints="NO" id="6te-af-0Dt">
-                                <rect key="frame" x="0.0" y="583" width="414" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="jDk-lk-NEE"/>
-                                </constraints>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ab-2R-VgR" customClass="MDCButton">
-                                <rect key="frame" x="50" y="724" width="314" height="38"/>
+                                <rect key="frame" x="50" y="732" width="314" height="30"/>
                                 <color key="backgroundColor" red="0.34677977493636669" green="0.59121227378435681" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Sign in with Google">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="by signing up you agree to our ToS and privacy policy" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B1l-Dc-ODQ">
-                                <rect key="frame" x="30" y="824" width="354" height="48"/>
+                                <rect key="frame" x="20" y="799" width="374" height="43"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -43,24 +37,19 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="B1l-Dc-ODQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1R1-UJ-By5"/>
+                            <constraint firstItem="B1l-Dc-ODQ" firstAttribute="top" secondItem="4Ab-2R-VgR" secondAttribute="bottom" constant="37" id="3V4-nP-bv1"/>
                             <constraint firstItem="4Ab-2R-VgR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LaV-L7-gJC"/>
                             <constraint firstItem="9sw-Dm-KKX" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="PLL-NT-J5r"/>
                             <constraint firstItem="9sw-Dm-KKX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="PYs-ri-q1g"/>
-                            <constraint firstItem="6te-af-0Dt" firstAttribute="leading" secondItem="9sw-Dm-KKX" secondAttribute="leading" id="Pu9-ve-1d5"/>
-                            <constraint firstItem="B1l-Dc-ODQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="QNR-eZ-eP1"/>
-                            <constraint firstItem="6te-af-0Dt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="539" id="Qz3-4L-PlN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="B1l-Dc-ODQ" secondAttribute="bottom" constant="20" id="Qm0-rv-3f6"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4Ab-2R-VgR" secondAttribute="trailing" constant="50" id="S0f-wT-6cL"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9sw-Dm-KKX" secondAttribute="bottom" constant="200" id="T3Q-nq-J2y"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="B1l-Dc-ODQ" secondAttribute="trailing" constant="30" id="ZrD-jy-lii"/>
+                            <constraint firstItem="B1l-Dc-ODQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="c7c-qp-aHo"/>
+                            <constraint firstItem="B1l-Dc-ODQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="fSd-8J-Cgf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4Ab-2R-VgR" secondAttribute="bottom" constant="100" id="hFg-6U-Lm7"/>
                             <constraint firstItem="9sw-Dm-KKX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="k2L-Qe-IAT"/>
-                            <constraint firstItem="B1l-Dc-ODQ" firstAttribute="centerX" secondItem="6te-af-0Dt" secondAttribute="centerX" id="m0k-0u-NVW"/>
-                            <constraint firstItem="B1l-Dc-ODQ" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="10" id="nIb-ru-Qpu"/>
-                            <constraint firstItem="4Ab-2R-VgR" firstAttribute="top" secondItem="6te-af-0Dt" secondAttribute="bottom" constant="13" id="pLk-Xw-IyT"/>
                             <constraint firstItem="4Ab-2R-VgR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="pr0-yQ-cMl"/>
-                            <constraint firstItem="B1l-Dc-ODQ" firstAttribute="top" secondItem="4Ab-2R-VgR" secondAttribute="bottom" constant="62" id="sS7-8D-Sc6"/>
-                            <constraint firstItem="B1l-Dc-ODQ" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="10" id="xd7-r0-GRC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="B1l-Dc-ODQ" secondAttribute="trailing" constant="20" id="xA0-YO-60r"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -74,7 +63,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="illustration_curved_top_login.png" width="1500" height="112"/>
         <image name="pet.jpg" width="715" height="1067"/>
     </resources>
 </document>
