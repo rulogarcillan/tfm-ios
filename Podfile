@@ -8,6 +8,9 @@ target 'adoptme' do
   # Pods for adoptme
 
   pod 'MaterialComponents/Buttons'
-
+  pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
+  pod 'GoogleSignIn'
+  pod 'Firebase/Analytics'
 
 end
