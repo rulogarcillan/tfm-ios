@@ -13,7 +13,7 @@
 		8A6AA3842319A3D4004CB118 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A6AA3832319A3D4004CB118 /* Assets.xcassets */; };
 		8A6AA3872319A3D4004CB118 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A6AA3852319A3D4004CB118 /* LaunchScreen.storyboard */; };
 		8A6AA397231A9247004CB118 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8A6AA396231A9247004CB118 /* GoogleService-Info.plist */; };
-		8A6AA399231AACFA004CB118 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6AA398231AACFA004CB118 /* MainController.swift */; };
+		8A6AA399231AACFA004CB118 /* TabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6AA398231AACFA004CB118 /* TabController.swift */; };
 		8A6AA39D231AC935004CB118 /* UserDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6AA39C231AC935004CB118 /* UserDto.swift */; };
 		8A6AA3A0231AC9EE004CB118 /* UserMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6AA39F231AC9EE004CB118 /* UserMapper.swift */; };
 		8A6AA3A2231ACE50004CB118 /* UserDtoExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6AA3A1231ACE50004CB118 /* UserDtoExt.swift */; };
@@ -31,7 +31,7 @@
 		8A6AA3862319A3D4004CB118 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8A6AA3882319A3D4004CB118 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A6AA396231A9247004CB118 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		8A6AA398231AACFA004CB118 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
+		8A6AA398231AACFA004CB118 /* TabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabController.swift; sourceTree = "<group>"; };
 		8A6AA39C231AC935004CB118 /* UserDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDto.swift; sourceTree = "<group>"; };
 		8A6AA39F231AC9EE004CB118 /* UserMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMapper.swift; sourceTree = "<group>"; };
 		8A6AA3A1231ACE50004CB118 /* UserDtoExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDtoExt.swift; sourceTree = "<group>"; };
@@ -114,7 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				8A6AA37E2319A3D2004CB118 /* LoginController.swift */,
-				8A6AA398231AACFA004CB118 /* MainController.swift */,
+				8A6AA398231AACFA004CB118 /* TabController.swift */,
 			);
 			path = viewcontroller;
 			sourceTree = "<group>";
@@ -272,7 +272,7 @@
 				8A6AA3A2231ACE50004CB118 /* UserDtoExt.swift in Sources */,
 				8A6AA37F2319A3D2004CB118 /* LoginController.swift in Sources */,
 				8A6AA3A0231AC9EE004CB118 /* UserMapper.swift in Sources */,
-				8A6AA399231AACFA004CB118 /* MainController.swift in Sources */,
+				8A6AA399231AACFA004CB118 /* TabController.swift in Sources */,
 				8A6AA39D231AC935004CB118 /* UserDto.swift in Sources */,
 				8A6AA37D2319A3D2004CB118 /* AppDelegate.swift in Sources */,
 			);

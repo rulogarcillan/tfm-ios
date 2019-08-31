@@ -42,6 +42,7 @@ class LoginController: UIViewController,  GIDSignInDelegate  {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+
         let userDto = Commons.readUserInMemory()
         if (userDto.uid != ""){
             DispatchQueue.main.async {
@@ -75,9 +76,9 @@ class LoginController: UIViewController,  GIDSignInDelegate  {
     }
     
     func navigateToMain() {
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "mainStoryBoard") as! MainController
+        let newViewController = storyboard?.instantiateViewController(withIdentifier: "TabController") as! TabController
         self.present(newViewController, animated: true, completion: nil)
+        
     }
 }
 

@@ -64,38 +64,96 @@
             </objects>
             <point key="canvasLocation" x="47.826086956521742" y="20.758928571428569"/>
         </scene>
-        <!--Main Controller-->
-        <scene sceneID="xHz-sI-JSh">
+        <!--Messages-->
+        <scene sceneID="R2S-8i-Ce1">
             <objects>
-                <viewController storyboardIdentifier="mainStoryBoard" id="ivQ-ZJ-Ncy" customClass="MainController" customModule="adoptme" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Lb3-CX-KUw">
+                <viewController id="9uw-XT-y47" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wI2-hw-Ccj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VKh-hJ-7Qh">
-                                <rect key="frame" x="-9" y="813" width="414" height="49"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m5t-ce-rPS">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <tabBarItem title="Home" image="Home" id="l9h-q3-PBv"/>
-                                    <tabBarItem title="Messages" image="Messages" id="YJj-ye-GB7" userLabel="Messages"/>
-                                    <tabBarItem title="Profile" image="Profile" id="IBK-K2-1GB"/>
+                                    <navigationItem title="Messages" id="eoJ-fq-xVb"/>
                                 </items>
-                            </tabBar>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="sHH-sT-KBo"/>
+                        <viewLayoutGuide key="safeArea" id="lWt-Ce-YAm"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Messages" image="Messages" id="KaV-y5-ljr"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IFm-Y8-6qW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oub-aH-yzr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="867" y="21"/>
+            <point key="canvasLocation" x="2435" y="-374"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="MKP-3l-JBj">
+            <objects>
+                <viewController id="gIF-Gv-Pr1" customClass="MainController" customModule="adoptme" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0b1-p0-7AR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BoB-jp-F8E">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Home" id="GTV-4A-1JV"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="9pW-2d-WO5"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="Home" id="GjM-0n-dtC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aMh-2F-FfO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1790" y="-374"/>
+        </scene>
+        <!--Tab Controller-->
+        <scene sceneID="I43-5N-vHx">
+            <objects>
+                <tabBarController storyboardIdentifier="TabController" id="U87-DL-gu1" customClass="TabController" customModule="adoptme" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mGW-Qa-8hu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="gIF-Gv-Pr1" kind="relationship" relationship="viewControllers" id="shZ-3M-PU8"/>
+                        <segue destination="9uw-XT-y47" kind="relationship" relationship="viewControllers" id="Kio-Qg-lCz"/>
+                        <segue destination="pPj-rJ-qo6" kind="relationship" relationship="viewControllers" id="fJq-T1-yS6"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZTa-ND-AHV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="812" y="21"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="LCG-PX-hdl">
+            <objects>
+                <viewController id="pPj-rJ-qo6" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KAo-K9-HkW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="SKb-f4-MBK"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Profile" image="Profile" id="xyD-KA-vxe"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z5t-5B-7p0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3067" y="-374"/>
         </scene>
     </scenes>
     <resources>
         <image name="Home" width="21.333333969116211" height="21.333333969116211"/>
-        <image name="Messages" width="42.666667938232422" height="42.666667938232422"/>
-        <image name="Profile" width="10.666666984558105" height="10.666666984558105"/>
+        <image name="Messages" width="21.333333969116211" height="21.333333969116211"/>
+        <image name="Profile" width="21.333333969116211" height="21.333333969116211"/>
         <image name="pet" width="715" height="1067"/>
     </resources>
 </document>
