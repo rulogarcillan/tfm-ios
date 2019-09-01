@@ -18,6 +18,9 @@
 		8A6AA3A0231AC9EE004CB118 /* UserMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6AA39F231AC9EE004CB118 /* UserMapper.swift */; };
 		8A6AA3A2231ACE50004CB118 /* UserDtoExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6AA3A1231ACE50004CB118 /* UserDtoExt.swift */; };
 		8A6AA3B9231AF28C004CB118 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6AA3B8231AF28C004CB118 /* ProfileViewController.swift */; };
+		8A765062231BDC0400EF8219 /* MenuItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A765060231BDC0400EF8219 /* MenuItemView.swift */; };
+		8A765063231BDC0400EF8219 /* MenuItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A765061231BDC0400EF8219 /* MenuItemView.xib */; };
+		8A765065231BE2D700EF8219 /* ItemProfileMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A765064231BE2D700EF8219 /* ItemProfileMenu.swift */; };
 		D246481AEFD22B1167F0C2BF /* Pods_adoptme.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D6DBF4F06DB98531653D851 /* Pods_adoptme.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +40,11 @@
 		8A6AA39F231AC9EE004CB118 /* UserMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMapper.swift; sourceTree = "<group>"; };
 		8A6AA3A1231ACE50004CB118 /* UserDtoExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDtoExt.swift; sourceTree = "<group>"; };
 		8A6AA3B8231AF28C004CB118 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		8A765060231BDC0400EF8219 /* MenuItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemView.swift; sourceTree = "<group>"; };
+		8A765061231BDC0400EF8219 /* MenuItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuItemView.xib; sourceTree = "<group>"; };
+		8A765064231BE2D700EF8219 /* ItemProfileMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemProfileMenu.swift; sourceTree = "<group>"; };
+		8A765068231BE4C100EF8219 /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/Main.strings"; sourceTree = "<group>"; };
+		8A765069231BE4C100EF8219 /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		BFB5ECE79A46AE006364D37F /* Pods-adoptme.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-adoptme.debug.xcconfig"; path = "Target Support Files/Pods-adoptme/Pods-adoptme.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -92,6 +100,7 @@
 			children = (
 				8A6AA396231A9247004CB118 /* GoogleService-Info.plist */,
 				8A6AA39B231AC8F7004CB118 /* commons */,
+				8A76505F231BDBCD00EF8219 /* views */,
 				8A6AA3902319A640004CB118 /* viewcontroller */,
 				8A6AA38F2319A5C4004CB118 /* model */,
 				8A6AA37C2319A3D2004CB118 /* AppDelegate.swift */,
@@ -108,6 +117,7 @@
 			children = (
 				8A6AA39E231AC9DD004CB118 /* mappers */,
 				8A6AA39C231AC935004CB118 /* UserDto.swift */,
+				8A765064231BE2D700EF8219 /* ItemProfileMenu.swift */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -136,6 +146,15 @@
 				8A6AA39F231AC9EE004CB118 /* UserMapper.swift */,
 			);
 			name = mappers;
+			sourceTree = "<group>";
+		};
+		8A76505F231BDBCD00EF8219 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				8A765060231BDC0400EF8219 /* MenuItemView.swift */,
+				8A765061231BDC0400EF8219 /* MenuItemView.xib */,
+			);
+			path = views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,8 +200,8 @@
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				"en-GB",
 			);
 			mainGroup = 8A6AA3702319A3D1004CB118;
 			productRefGroup = 8A6AA37A2319A3D2004CB118 /* Products */;
@@ -203,6 +222,7 @@
 				8A6AA3842319A3D4004CB118 /* Assets.xcassets in Resources */,
 				8A6AA3822319A3D2004CB118 /* Main.storyboard in Resources */,
 				8A6AA397231A9247004CB118 /* GoogleService-Info.plist in Resources */,
+				8A765063231BDC0400EF8219 /* MenuItemView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,8 +294,10 @@
 			files = (
 				8A6AA3A2231ACE50004CB118 /* UserDtoExt.swift in Sources */,
 				8A6AA37F2319A3D2004CB118 /* LoginController.swift in Sources */,
+				8A765065231BE2D700EF8219 /* ItemProfileMenu.swift in Sources */,
 				8A6AA3A0231AC9EE004CB118 /* UserMapper.swift in Sources */,
 				8A6AA399231AACFA004CB118 /* TabController.swift in Sources */,
+				8A765062231BDC0400EF8219 /* MenuItemView.swift in Sources */,
 				8A6AA3B9231AF28C004CB118 /* ProfileViewController.swift in Sources */,
 				8A6AA39D231AC935004CB118 /* UserDto.swift in Sources */,
 				8A6AA37D2319A3D2004CB118 /* AppDelegate.swift in Sources */,
@@ -289,6 +311,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				8A6AA3812319A3D2004CB118 /* Base */,
+				8A765068231BE4C100EF8219 /* en-GB */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -297,6 +320,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				8A6AA3862319A3D4004CB118 /* Base */,
+				8A765069231BE4C100EF8219 /* en-GB */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -308,6 +332,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -369,6 +394,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

@@ -14,12 +14,20 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var imgProfile: UIImageView!
     @IBOutlet weak var lbNAme: UILabel!
     @IBOutlet weak var lbEmail: UILabel!
+    @IBOutlet weak var tableMenu: UITableView!
     
     let userDto = Commons.readUserInMemory()
+    var menu : [ItemProfileMenu] = []
+    
+    override func viewDidAppear(_ animated: Bool) {
+        navigationController?.navigationBar.barStyle = .black
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        menu = createMenuList()
+        
         lbNAme.text = userDto.name
         lbEmail.text = userDto.email
         
@@ -28,18 +36,47 @@ class ProfileViewController: UIViewController {
         
         imgProfile.layer.cornerRadius = 32;
 
-     
+        tableMenu.register((UINib(nibName: "MenuItemView", bundle: nil)),forCellReuseIdentifier: "idCellMenu")
+
+
     }
     
+    func createMenuList() -> [ItemProfileMenu]{
+        
+        var listItem = [ItemProfileMenu]()
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+         listItem.append(ItemProfileMenu(icon: "", text: NSLocalizedString("Personal Data", comment: "")))
+        
+         listItem.append(ItemProfileMenu(icon: "", text: NSLocalizedString("Terms & Condition", comment: "")))
+        
+         listItem.append(ItemProfileMenu(icon: "", text: NSLocalizedString("License", comment: "")))
+        
+         listItem.append(ItemProfileMenu(icon: "", text: NSLocalizedString("Logout", comment: "")))
+        
+        return listItem
+        
     }
-    */
 
 }
+
+extension ProfileViewController : UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return menu.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        tableView.separatorStyle = .none
+
+        let item = tableView.dequeueReusableCell(withIdentifier: "idCellMenu") as? MenuItemView
+        item?.configureCell(item: menu[indexPath.row])
+               
+        return item ?? MenuItemView()
+    }
+}
+
+extension ProfileViewController: UITableViewDelegate{
+    
+}
+

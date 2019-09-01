@@ -1,0 +1,33 @@
+
+/* Class = "UIButton"; normalTitle = "Sign in with Google"; ObjectID = "4Ab-2R-VgR"; */
+"4Ab-2R-VgR.normalTitle" = "Sign in with Google";
+
+/* Class = "UINavigationItem"; title = "Home"; ObjectID = "GTV-4A-1JV"; */
+"GTV-4A-1JV.title" = "Home";
+
+/* Class = "UITabBarItem"; title = "Home"; ObjectID = "GjM-0n-dtC"; */
+"GjM-0n-dtC.title" = "Home";
+
+/* Class = "UITabBarItem"; title = "Messages"; ObjectID = "KaV-y5-ljr"; */
+"KaV-y5-ljr.title" = "Messages";
+
+/* Class = "UILabel"; text = "Raúl Rodríguez"; ObjectID = "PZO-KL-uJ0"; */
+"PZO-KL-uJ0.text" = "Raúl Rodríguez";
+
+/* Class = "UILabel"; text = "by signing up you agree to our ToS and privacy policy"; ObjectID = "Q6k-6F-HaB"; */
+"Q6k-6F-HaB.text" = "by signing up you agree to our ToS and privacy policy";
+
+/* Class = "UINavigationItem"; title = "Messages"; ObjectID = "eoJ-fq-xVb"; */
+"eoJ-fq-xVb.title" = "Messages";
+
+/* Class = "UILabel"; text = "Email@email.com"; ObjectID = "ufD-bf-UGv"; */
+"ufD-bf-UGv.text" = "Email@email.com";
+
+/* Class = "UITabBarItem"; title = "Profile"; ObjectID = "xyD-KA-vxe"; */
+"xyD-KA-vxe.title" = "Profile";
+
+"Personal data" = "Personal data";
+"Terms & Condition" = "Terms & Condition";
+"License" = "License";
+"Logout" = "Logout";
+
