@@ -10,6 +10,7 @@ target 'adoptme' do
   pod 'MaterialComponents/Buttons'
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
+  pod 'Firebase/Core'
   pod 'GoogleSignIn'
   pod 'Firebase/Analytics'
   pod 'SDWebImage', '~> 4.0'

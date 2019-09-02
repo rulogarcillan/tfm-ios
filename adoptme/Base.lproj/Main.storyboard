@@ -108,7 +108,7 @@
         <!--Home-->
         <scene sceneID="MKP-3l-JBj">
             <objects>
-                <viewController storyboardIdentifier="HomeController" id="gIF-Gv-Pr1" customClass="HomeController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeController" id="gIF-Gv-Pr1" customClass="HomeController" customModule="adoptme" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0b1-p0-7AR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -120,16 +120,27 @@
                                     <navigationItem title="Home" id="GTV-4A-1JV"/>
                                 </items>
                             </navigationBar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Q4e-HT-o0V">
+                                <rect key="frame" x="0.0" y="88" width="375" height="270.66666666666669"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Q4e-HT-o0V" firstAttribute="centerX" secondItem="0b1-p0-7AR" secondAttribute="centerX" id="6e7-RH-up5"/>
+                            <constraint firstItem="9pW-2d-WO5" firstAttribute="trailing" secondItem="Q4e-HT-o0V" secondAttribute="trailing" id="79U-VS-APm"/>
                             <constraint firstItem="BoB-jp-F8E" firstAttribute="leading" secondItem="9pW-2d-WO5" secondAttribute="leading" id="QuI-Uw-KGt"/>
+                            <constraint firstItem="Q4e-HT-o0V" firstAttribute="height" secondItem="0b1-p0-7AR" secondAttribute="height" multiplier="1:3" id="fS3-Fp-Org"/>
                             <constraint firstItem="BoB-jp-F8E" firstAttribute="trailing" secondItem="9pW-2d-WO5" secondAttribute="trailing" id="mXf-5b-Xmp"/>
+                            <constraint firstItem="Q4e-HT-o0V" firstAttribute="top" secondItem="BoB-jp-F8E" secondAttribute="bottom" id="qxa-cB-M9l"/>
                             <constraint firstItem="BoB-jp-F8E" firstAttribute="top" secondItem="9pW-2d-WO5" secondAttribute="top" id="wHZ-y0-cFI"/>
+                            <constraint firstItem="Q4e-HT-o0V" firstAttribute="leading" secondItem="9pW-2d-WO5" secondAttribute="leading" id="wnc-He-DC0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9pW-2d-WO5"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="Home" id="GjM-0n-dtC"/>
+                    <connections>
+                        <outlet property="imageView" destination="Q4e-HT-o0V" id="blj-V2-S1w"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aMh-2F-FfO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
