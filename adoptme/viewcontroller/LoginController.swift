@@ -31,7 +31,7 @@ class LoginController: UIViewController,  GIDSignInDelegate  {
             }
             if let userDto = user?.toUserDto(){
                 Commons.saveUserInMemory(user: userDto)
-                self.navigateToMain()
+                Navigation.navigationToHome(ui: self)
             }
             
         })
@@ -46,7 +46,7 @@ class LoginController: UIViewController,  GIDSignInDelegate  {
         let userDto = Commons.readUserInMemory()
         if (userDto.uid != ""){
             DispatchQueue.main.async {
-                 self.navigateToMain()
+                Navigation.navigationToHome(ui: self)
             }
         }else{
             GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
@@ -75,10 +75,5 @@ class LoginController: UIViewController,  GIDSignInDelegate  {
         dismiss(animated: true) {() -> Void in }
     }
     
-    func navigateToMain() {
-        let newViewController = storyboard?.instantiateViewController(withIdentifier: "TabController") as! TabController
-        self.present(newViewController, animated: true, completion: nil)
-        
-    }
 }
 

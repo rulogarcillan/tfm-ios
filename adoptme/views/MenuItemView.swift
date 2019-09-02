@@ -15,6 +15,7 @@ class MenuItemView: UITableViewCell {
     @IBOutlet weak var ivIcon: UIImageView!
     
     func configureCell(item: ItemProfileMenu) {
+       ivIcon.image = UIImage(named: item.icon)
        lbTitle.text = item.text
     }
 }
