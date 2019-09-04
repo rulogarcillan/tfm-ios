@@ -35,34 +35,38 @@ class HomeController: UIViewController{
      
 
         let slide1:MViewPager = Bundle.main.loadNibNamed("MViewPager", owner: self, options: nil)?.first as! MViewPager
-        slide1.ivPet.sd_setImage(with: URL(string: animals[0].imageUrl[0]))
+        slide1.imageview.sd_setImage(with: URL(string: animals[0].imageUrl[0]))
         
-       /* let slide2:PagerView = Bundle.main.loadNibNamed("PagerView", owner: self, options: nil)?.first as! PagerView
+        let slide2:MViewPager = Bundle.main.loadNibNamed("MViewPager", owner: self, options: nil)?.first as! MViewPager
         slide2.imageview.sd_setImage(with: URL(string: animals[1].imageUrl[0]))
         
-        let slide3:PagerView = Bundle.main.loadNibNamed("PagerView", owner: self, options: nil)?.first as! PagerView
+        let slide3:MViewPager = Bundle.main.loadNibNamed("MViewPager", owner: self, options: nil)?.first as! MViewPager
         slide3.imageview.sd_setImage(with: URL(string: animals[2].imageUrl[0]))
 
-        let slide4:PagerView = Bundle.main.loadNibNamed("PagerView", owner: self, options: nil)?.first as! PagerView
+        let slide4:MViewPager = Bundle.main.loadNibNamed("MViewPager", owner: self, options: nil)?.first as! MViewPager
         slide4.imageview.sd_setImage(with: URL(string: animals[3].imageUrl[0]))
         
-        let slide5:PagerView = Bundle.main.loadNibNamed("PagerView", owner: self, options: nil)?.first as! PagerView
+        let slide5:MViewPager = Bundle.main.loadNibNamed("MViewPager", owner: self, options: nil)?.first as! MViewPager
         slide5.imageview.sd_setImage(with: URL(string: animals[4].imageUrl[0]))
         
-        return [slide1, slide2, slide3, slide4, slide5]*/
-        return [slide1]
+        return [slide1, slide2, slide3, slide4, slide5]
+    
     }
     
     func setupSlideScrollView(slides : [MViewPager]) {
-      /*  scView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
         
+       
         
-        */
+        scView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
         scView.contentSize = CGSize(width: view.frame.width * CGFloat(slides.count), height: view.frame.height)
         scView.isPagingEnabled = true
         for i in 0 ..< slides.count {
             slides[i].frame = CGRect(x: view.frame.width * CGFloat(i), y: 0, width: view.frame.width, height: view.frame.height)
             scView.addSubview(slides[i])
+        }
+        
+        if #available(iOS 11, *) {
+            scView.contentInsetAdjustmentBehavior = .never
         }
     }
 

@@ -16,20 +16,20 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wFJ-vE-TZa">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8hp-MU-Duq">
+                    <rect key="frame" x="0.0" y="44" width="414" height="896"/>
                 </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="wFJ-vE-TZa" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="0ws-5V-FgL"/>
-                <constraint firstItem="wFJ-vE-TZa" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="3Pf-JQ-7DI"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="wFJ-vE-TZa" secondAttribute="trailing" id="DJJ-6W-6w6"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="wFJ-vE-TZa" secondAttribute="bottom" id="Y3X-hS-CRq"/>
+                <constraint firstItem="8hp-MU-Duq" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Xlv-MK-6IT"/>
+                <constraint firstItem="8hp-MU-Duq" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Xxu-jB-fsX"/>
+                <constraint firstItem="8hp-MU-Duq" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Yp7-gD-h24"/>
+                <constraint firstItem="8hp-MU-Duq" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" id="c1V-Eu-Kc1"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
-                <outlet property="ivPet" destination="wFJ-vE-TZa" id="LVG-Rk-gGS"/>
+                <outlet property="imageview" destination="8hp-MU-Duq" id="z1N-IG-w4A"/>
             </connections>
         </view>
     </objects>

@@ -8,9 +8,10 @@
 
 import UIKit
 
-class MViewPager: UIView {
+class MViewPager: UIImageView {
 
-    @IBOutlet weak var ivPet: UIImageView!
+ 
+    @IBOutlet weak var imageview: UIImageView!
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
