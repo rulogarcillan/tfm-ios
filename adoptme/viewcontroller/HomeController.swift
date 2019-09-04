@@ -9,65 +9,61 @@
 import UIKit
 import Foundation
 
-class HomeController: UIViewController {
-
-    @IBOutlet weak var imageView: UIImageView!
+class HomeController: UIViewController{
+    @IBOutlet weak var scView: UIScrollView!
     
     var animals = [RecordDto]()
+    var slides:[MViewPager] = [];
+
     var position = 0
-    
- 
    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.scView.contentSize.height = 1.0 // disable vertical scroll
 
-        
+        scView.alwaysBounceHorizontal = true
+        scView.alwaysBounceVertical = false
         FirebaseRepository.getAllRecords(animal: nil){
             self.animals = $0
-            self.initImager()
-            self.startTimer()
+            self.slides = self.createSlides()
+            self.setupSlideScrollView(slides: self.slides)
         }
     }
     
-    func initImager() {
+    func createSlides() -> [MViewPager] {
         
-          imageView.sd_setImage(with: URL(string: animals[position].imageUrl[0]))
-        
-        if (animals.count >= 5){
-            if (position == 4){
-                position  = 0
-            }else{
-                position += 1
-            }
-        }else{
-            if (position == animals.count-1){
-                position = 0
-            }else{
-                position += 1
-            }
-        }
-        
-    }
-    
-    
-    weak var timer: Timer?
-    
-    func startTimer() {
-        timer?.invalidate()   // just in case you had existing `Timer`, `invalidate` it before we lose our reference to it
-        timer = Timer.scheduledTimer(withTimeInterval: 5, repeats: true) { [weak self] _ in
-            self!.initImager()
-        }
-    }
-    
-    func stopTimer() {
-        timer?.invalidate()
-    }
-    
-    // if appropriate, make sure to stop your timer in `deinit`
-    
-    deinit {
-        stopTimer()
-    }
+     
 
+        let slide1:MViewPager = Bundle.main.loadNibNamed("MViewPager", owner: self, options: nil)?.first as! MViewPager
+        slide1.ivPet.sd_setImage(with: URL(string: animals[0].imageUrl[0]))
+        
+       /* let slide2:PagerView = Bundle.main.loadNibNamed("PagerView", owner: self, options: nil)?.first as! PagerView
+        slide2.imageview.sd_setImage(with: URL(string: animals[1].imageUrl[0]))
+        
+        let slide3:PagerView = Bundle.main.loadNibNamed("PagerView", owner: self, options: nil)?.first as! PagerView
+        slide3.imageview.sd_setImage(with: URL(string: animals[2].imageUrl[0]))
+
+        let slide4:PagerView = Bundle.main.loadNibNamed("PagerView", owner: self, options: nil)?.first as! PagerView
+        slide4.imageview.sd_setImage(with: URL(string: animals[3].imageUrl[0]))
+        
+        let slide5:PagerView = Bundle.main.loadNibNamed("PagerView", owner: self, options: nil)?.first as! PagerView
+        slide5.imageview.sd_setImage(with: URL(string: animals[4].imageUrl[0]))
+        
+        return [slide1, slide2, slide3, slide4, slide5]*/
+        return [slide1]
+    }
+    
+    func setupSlideScrollView(slides : [MViewPager]) {
+      /*  scView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
+        
+        
+        */
+        scView.contentSize = CGSize(width: view.frame.width * CGFloat(slides.count), height: view.frame.height)
+        scView.isPagingEnabled = true
+        for i in 0 ..< slides.count {
+            slides[i].frame = CGRect(x: view.frame.width * CGFloat(i), y: 0, width: view.frame.width, height: view.frame.height)
+            scView.addSubview(slides[i])
+        }
+    }
 
 }

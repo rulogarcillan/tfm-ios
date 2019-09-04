@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="MViewPager" id="iN0-l3-epB" customClass="MViewPager" customModule="adoptme" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wFJ-vE-TZa">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="wFJ-vE-TZa" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="0ws-5V-FgL"/>
+                <constraint firstItem="wFJ-vE-TZa" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="3Pf-JQ-7DI"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="wFJ-vE-TZa" secondAttribute="trailing" id="DJJ-6W-6w6"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="wFJ-vE-TZa" secondAttribute="bottom" id="Y3X-hS-CRq"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="ivPet" destination="wFJ-vE-TZa" id="LVG-Rk-gGS"/>
+            </connections>
+        </view>
+    </objects>
+</document>
