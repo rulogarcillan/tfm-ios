@@ -32,31 +32,21 @@ class HomeController: UIViewController{
     
     func createSlides() -> [MViewPager] {
         
-     
+        let size = animals.count > 5 ? 5 : animals.count
+        var mSlides:[MViewPager] = [];
+        for n in 0...size-1 {
+            let slide1:MViewPager = Bundle.main.loadNibNamed("MViewPager", owner: self, options: nil)?.first as! MViewPager
+            slide1.imageview.sd_setImage(with: URL(string: animals[n].imageUrl[0]))
+            slide1.lbname.text = animals[n].name
+            mSlides.append(slide1)
+        }
 
-        let slide1:MViewPager = Bundle.main.loadNibNamed("MViewPager", owner: self, options: nil)?.first as! MViewPager
-        slide1.imageview.sd_setImage(with: URL(string: animals[0].imageUrl[0]))
-        
-        let slide2:MViewPager = Bundle.main.loadNibNamed("MViewPager", owner: self, options: nil)?.first as! MViewPager
-        slide2.imageview.sd_setImage(with: URL(string: animals[1].imageUrl[0]))
-        
-        let slide3:MViewPager = Bundle.main.loadNibNamed("MViewPager", owner: self, options: nil)?.first as! MViewPager
-        slide3.imageview.sd_setImage(with: URL(string: animals[2].imageUrl[0]))
-
-        let slide4:MViewPager = Bundle.main.loadNibNamed("MViewPager", owner: self, options: nil)?.first as! MViewPager
-        slide4.imageview.sd_setImage(with: URL(string: animals[3].imageUrl[0]))
-        
-        let slide5:MViewPager = Bundle.main.loadNibNamed("MViewPager", owner: self, options: nil)?.first as! MViewPager
-        slide5.imageview.sd_setImage(with: URL(string: animals[4].imageUrl[0]))
-        
-        return [slide1, slide2, slide3, slide4, slide5]
+        return mSlides
     
     }
     
     func setupSlideScrollView(slides : [MViewPager]) {
-        
-       
-        
+              
         scView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
         scView.contentSize = CGSize(width: view.frame.width * CGFloat(slides.count), height: view.frame.height)
         scView.isPagingEnabled = true

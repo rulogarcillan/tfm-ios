@@ -10,7 +10,8 @@ import UIKit
 
 class MViewPager: UIImageView {
 
- 
+    @IBOutlet weak var lbname: UILabel!
+    
     @IBOutlet weak var imageview: UIImageView!
     /*
     // Only override draw() if you perform custom drawing.

@@ -120,20 +120,49 @@
                                     <navigationItem title="Home" id="GTV-4A-1JV"/>
                                 </items>
                             </navigationBar>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sGm-Br-Bio">
-                                <rect key="frame" x="0.0" y="88" width="375" height="270.66666666666669"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GD9-Cr-7Cf">
+                                <rect key="frame" x="0.0" y="88" width="375" height="812"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Last dog" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cu8-hq-hJq">
+                                        <rect key="frame" x="154" y="391" width="67" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h2g-1C-VVT">
+                                        <rect key="frame" x="163" y="391" width="49" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <color key="tintColor" red="0.1874565637" green="0.43695982459999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="See all">
+                                            <color key="titleColor" red="0.3467797749" green="0.59121227379999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                    </button>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SEE-Sv-BaY">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="642"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sGm-Br-Bio">
+                                                <rect key="frame" x="30" y="135" width="375" height="27"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </scrollView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                                <viewLayoutGuide key="safeArea" id="Dqh-x2-c7F"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="sGm-Br-Bio" firstAttribute="leading" secondItem="9pW-2d-WO5" secondAttribute="leading" id="9c4-bL-i0A"/>
+                            <constraint firstItem="GD9-Cr-7Cf" firstAttribute="leading" secondItem="9pW-2d-WO5" secondAttribute="leading" id="79r-uP-s3i"/>
+                            <constraint firstItem="GD9-Cr-7Cf" firstAttribute="bottom" secondItem="9pW-2d-WO5" secondAttribute="bottom" constant="171" id="OHx-Lo-7hr"/>
+                            <constraint firstItem="GD9-Cr-7Cf" firstAttribute="top" secondItem="9pW-2d-WO5" secondAttribute="top" constant="44" id="Q1V-bH-d7S"/>
                             <constraint firstItem="BoB-jp-F8E" firstAttribute="leading" secondItem="9pW-2d-WO5" secondAttribute="leading" id="QuI-Uw-KGt"/>
-                            <constraint firstItem="9pW-2d-WO5" firstAttribute="trailing" secondItem="sGm-Br-Bio" secondAttribute="trailing" id="Stz-pM-16y"/>
-                            <constraint firstItem="sGm-Br-Bio" firstAttribute="height" secondItem="0b1-p0-7AR" secondAttribute="height" multiplier="1:3" id="gPR-HG-hic"/>
-                            <constraint firstItem="sGm-Br-Bio" firstAttribute="centerX" secondItem="0b1-p0-7AR" secondAttribute="centerX" id="hzT-Fy-BDa"/>
+                            <constraint firstItem="9pW-2d-WO5" firstAttribute="trailing" secondItem="GD9-Cr-7Cf" secondAttribute="trailing" id="fst-PN-txw"/>
                             <constraint firstItem="BoB-jp-F8E" firstAttribute="trailing" secondItem="9pW-2d-WO5" secondAttribute="trailing" id="mXf-5b-Xmp"/>
                             <constraint firstItem="BoB-jp-F8E" firstAttribute="top" secondItem="9pW-2d-WO5" secondAttribute="top" id="wHZ-y0-cFI"/>
-                            <constraint firstItem="sGm-Br-Bio" firstAttribute="top" secondItem="BoB-jp-F8E" secondAttribute="bottom" id="xWi-cP-h5Y"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9pW-2d-WO5"/>
                     </view>
@@ -144,7 +173,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aMh-2F-FfO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1413" y="-129"/>
+            <point key="canvasLocation" x="1412" y="-129.31034482758622"/>
         </scene>
         <!--Tab Controller-->
         <scene sceneID="I43-5N-vHx">
@@ -434,6 +463,19 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WCL-ls-IKn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="196" y="1233"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ZF9-Zn-t7m">
+            <objects>
+                <viewController id="bye-zV-peM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FOj-d2-Fop">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SKW-S1-Gfz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
     <resources>
