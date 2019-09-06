@@ -15,9 +15,7 @@ class HomeController: UIViewController{
     @IBOutlet weak var tbView: UICollectionView!
     var animals = [RecordDto]()
     var animalsFive = [RecordDto]()
-    var gameTimer: Timer?
-
-
+    weak var timer: Timer?
     var position = 0
    
     override func viewDidLoad() {
@@ -30,19 +28,47 @@ class HomeController: UIViewController{
         self.tbView.register(UINib(nibName: "PetViewCell", bundle: nil), forCellWithReuseIdentifier: "PetViewCell")
         self.tbView.reloadData()
         self.tbViewPager.reloadData()
-        self.initPagerTimer()
+        self.startTimer()
         }
     }
     
-    func initPagerTimer(){
-        let timer = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: true) { timer in
-            print("Timer fired!")
+    func initImager() {
+               
+        if (animalsFive.count >= 5){
+            if (position == 4){
+                position  = 0
+            }else{
+                position += 1
+            }
+        }else{
+            if (position == animalsFive.count-1){
+                position = 0
+            }else{
+                position += 1
+            }
         }
         
-        let indexPath = IndexPath(row: 2, section: 0)
+        let indexPath = IndexPath(row: position, section: 0)
         self.tbViewPager.scrollToItem(at: indexPath, at: UICollectionView.ScrollPosition.right, animated: true)
+        
     }
     
+    func startTimer() {
+        timer?.invalidate()
+        timer = Timer.scheduledTimer(withTimeInterval: 5, repeats: true) { [weak self] _ in
+            self!.initImager()
+        }
+    }
+    
+    func stopTimer() {
+        timer?.invalidate()
+    }
+    
+    deinit {
+        stopTimer()
+    }
+    
+   
     func createSlides() -> [RecordDto] {
         
         let size = animals.count > 5 ? 5 : animals.count

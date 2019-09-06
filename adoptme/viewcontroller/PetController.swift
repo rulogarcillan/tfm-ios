@@ -15,6 +15,8 @@ class PetController: UIViewController {
     @IBOutlet weak var imgProfile: UIImageView!
     @IBOutlet weak var lbNAme: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
+    var position = 0
+    weak var timer: Timer?
     
     var animal: RecordDto = RecordDto()
     
@@ -30,12 +32,51 @@ class PetController: UIViewController {
         imgProfile.sd_setImage(with: URL(string: userDto.photoUrl))
         
         imgProfile.layer.cornerRadius = 32;
+        startTimer()
 
     }
     
     @IBAction func clickBack(_ sender: Any) {
         dismiss(animated: true, completion: nil)
-    }   
+    }
+    
+    
+    
+    func initImager() {
+        
+        if (animal.imageUrl.count >= 4){
+            if (position == 3){
+                position  = 0
+            }else{
+                position += 1
+            }
+        }else{
+            if (position == animal.imageUrl.count-1){
+                position = 0
+            }else{
+                position += 1
+            }
+        }
+        
+        let indexPath = IndexPath(row: position, section: 0)
+        self.collectionView.scrollToItem(at: indexPath, at: UICollectionView.ScrollPosition.right, animated: true)
+        
+    }
+    
+    func startTimer() {
+        timer?.invalidate()
+        timer = Timer.scheduledTimer(withTimeInterval: 5, repeats: true) { [weak self] _ in
+            self!.initImager()
+        }
+    }
+    
+    func stopTimer() {
+        timer?.invalidate()
+    }
+    
+    deinit {
+        stopTimer()
+    }
 
 }
 
