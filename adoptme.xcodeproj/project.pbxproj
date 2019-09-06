@@ -19,7 +19,7 @@
 		8A57B7ED231D8E50008F1C8F /* RecordMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A57B7EC231D8E50008F1C8F /* RecordMapper.swift */; };
 		8A6AA37D2319A3D2004CB118 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6AA37C2319A3D2004CB118 /* AppDelegate.swift */; };
 		8A6AA37F2319A3D2004CB118 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6AA37E2319A3D2004CB118 /* LoginController.swift */; };
-		8A6AA3822319A3D2004CB118 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A6AA3802319A3D2004CB118 /* Main.storyboard */; };
+		8A6AA3822319A3D2004CB118 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A6AA3802319A3D2004CB118 /* Main.storyboard */; settings = {ASSET_TAGS = (cell, ); }; };
 		8A6AA3842319A3D4004CB118 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A6AA3832319A3D4004CB118 /* Assets.xcassets */; };
 		8A6AA3872319A3D4004CB118 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A6AA3852319A3D4004CB118 /* LaunchScreen.storyboard */; };
 		8A6AA397231A9247004CB118 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8A6AA396231A9247004CB118 /* GoogleService-Info.plist */; };
@@ -35,9 +35,8 @@
 		8A76506D231C23AB00EF8219 /* TermsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A76506C231C23AB00EF8219 /* TermsController.swift */; };
 		8A76506F231C23FD00EF8219 /* LicenseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A76506E231C23FD00EF8219 /* LicenseController.swift */; };
 		8A765071231C2B8F00EF8219 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A765070231C2B8F00EF8219 /* ProfileController.swift */; };
+		8A8EF31B2322C57A00FC929C /* PetImageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8EF31A2322C57A00FC929C /* PetImageViewCell.swift */; };
 		8AAA78E623218A240084C501 /* PetViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAA78E423218A240084C501 /* PetViewCell.swift */; };
-		8AF56D93232046C10085BFB8 /* MViewPager.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AF56D92232046C10085BFB8 /* MViewPager.xib */; };
-		8AF56D95232047060085BFB8 /* MViewPager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF56D94232047060085BFB8 /* MViewPager.swift */; };
 		D246481AEFD22B1167F0C2BF /* Pods_adoptme.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D6DBF4F06DB98531653D851 /* Pods_adoptme.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,9 +75,8 @@
 		8A76506C231C23AB00EF8219 /* TermsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsController.swift; sourceTree = "<group>"; };
 		8A76506E231C23FD00EF8219 /* LicenseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseController.swift; sourceTree = "<group>"; };
 		8A765070231C2B8F00EF8219 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
+		8A8EF31A2322C57A00FC929C /* PetImageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetImageViewCell.swift; sourceTree = "<group>"; };
 		8AAA78E423218A240084C501 /* PetViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetViewCell.swift; sourceTree = "<group>"; };
-		8AF56D92232046C10085BFB8 /* MViewPager.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MViewPager.xib; sourceTree = "<group>"; };
-		8AF56D94232047060085BFB8 /* MViewPager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MViewPager.swift; sourceTree = "<group>"; };
 		BFB5ECE79A46AE006364D37F /* Pods-adoptme.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-adoptme.debug.xcconfig"; path = "Target Support Files/Pods-adoptme/Pods-adoptme.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -216,10 +214,9 @@
 			children = (
 				8A765060231BDC0400EF8219 /* MenuItemView.swift */,
 				8A765061231BDC0400EF8219 /* MenuItemView.xib */,
-				8AF56D92232046C10085BFB8 /* MViewPager.xib */,
-				8AF56D94232047060085BFB8 /* MViewPager.swift */,
 				8AAA78E423218A240084C501 /* PetViewCell.swift */,
 				8A370876232231B000D1922C /* PetViewCell.xib */,
+				8A8EF31A2322C57A00FC929C /* PetImageViewCell.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -254,6 +251,7 @@
 			isa = PBXProject;
 			attributes = {
 				KnownAssetTags = (
+					cell,
 					detailPet,
 				);
 				LastSwiftUpdateCheck = 1030;
@@ -289,7 +287,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8AF56D93232046C10085BFB8 /* MViewPager.xib in Resources */,
 				8A6AA3872319A3D4004CB118 /* LaunchScreen.storyboard in Resources */,
 				8A6AA3842319A3D4004CB118 /* Assets.xcassets in Resources */,
 				8A6AA3822319A3D2004CB118 /* Main.storyboard in Resources */,
@@ -370,7 +367,6 @@
 				8A57B7E9231D83BA008F1C8F /* FirebaseRepository.swift in Sources */,
 				8A3708792322774F00D1922C /* PetController.swift in Sources */,
 				8A6AA3A2231ACE50004CB118 /* Commons.swift in Sources */,
-				8AF56D95232047060085BFB8 /* MViewPager.swift in Sources */,
 				8A76506F231C23FD00EF8219 /* LicenseController.swift in Sources */,
 				8A57B7DD231D6621008F1C8F /* HomeController.swift in Sources */,
 				8A6AA37F2319A3D2004CB118 /* LoginController.swift in Sources */,
@@ -379,6 +375,7 @@
 				8A57B7E5231D80D3008F1C8F /* Sex.swift in Sources */,
 				8A6AA3A0231AC9EE004CB118 /* UserMapper.swift in Sources */,
 				8A765071231C2B8F00EF8219 /* ProfileController.swift in Sources */,
+				8A8EF31B2322C57A00FC929C /* PetImageViewCell.swift in Sources */,
 				8AAA78E623218A240084C501 /* PetViewCell.swift in Sources */,
 				8A57B7ED231D8E50008F1C8F /* RecordMapper.swift in Sources */,
 				8A76506D231C23AB00EF8219 /* TermsController.swift in Sources */,
