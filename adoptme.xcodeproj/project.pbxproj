@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A370877232231B000D1922C /* PetViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A370876232231B000D1922C /* PetViewCell.xib */; };
+		8A3708792322774F00D1922C /* PetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3708782322774F00D1922C /* PetController.swift */; };
 		8A57B7DD231D6621008F1C8F /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A57B7DC231D6621008F1C8F /* HomeController.swift */; };
 		8A57B7DF231D663A008F1C8F /* MessagesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A57B7DE231D663A008F1C8F /* MessagesController.swift */; };
 		8A57B7E1231D7F52008F1C8F /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A57B7E0231D7F52008F1C8F /* Record.swift */; };
@@ -24,7 +26,7 @@
 		8A6AA399231AACFA004CB118 /* TabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6AA398231AACFA004CB118 /* TabController.swift */; };
 		8A6AA39D231AC935004CB118 /* UserDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6AA39C231AC935004CB118 /* UserDto.swift */; };
 		8A6AA3A0231AC9EE004CB118 /* UserMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6AA39F231AC9EE004CB118 /* UserMapper.swift */; };
-		8A6AA3A2231ACE50004CB118 /* UserDtoExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6AA3A1231ACE50004CB118 /* UserDtoExt.swift */; };
+		8A6AA3A2231ACE50004CB118 /* Commons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6AA3A1231ACE50004CB118 /* Commons.swift */; };
 		8A6AA3B9231AF28C004CB118 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6AA3B8231AF28C004CB118 /* ProfileViewController.swift */; };
 		8A765062231BDC0400EF8219 /* MenuItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A765060231BDC0400EF8219 /* MenuItemView.swift */; };
 		8A765063231BDC0400EF8219 /* MenuItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A765061231BDC0400EF8219 /* MenuItemView.xib */; };
@@ -33,6 +35,7 @@
 		8A76506D231C23AB00EF8219 /* TermsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A76506C231C23AB00EF8219 /* TermsController.swift */; };
 		8A76506F231C23FD00EF8219 /* LicenseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A76506E231C23FD00EF8219 /* LicenseController.swift */; };
 		8A765071231C2B8F00EF8219 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A765070231C2B8F00EF8219 /* ProfileController.swift */; };
+		8AAA78E623218A240084C501 /* PetViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAA78E423218A240084C501 /* PetViewCell.swift */; };
 		8AF56D93232046C10085BFB8 /* MViewPager.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AF56D92232046C10085BFB8 /* MViewPager.xib */; };
 		8AF56D95232047060085BFB8 /* MViewPager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF56D94232047060085BFB8 /* MViewPager.swift */; };
 		D246481AEFD22B1167F0C2BF /* Pods_adoptme.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D6DBF4F06DB98531653D851 /* Pods_adoptme.framework */; };
@@ -41,6 +44,8 @@
 /* Begin PBXFileReference section */
 		312D6697F8F495FAC7F8A38C /* Pods-adoptme.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-adoptme.release.xcconfig"; path = "Target Support Files/Pods-adoptme/Pods-adoptme.release.xcconfig"; sourceTree = "<group>"; };
 		7D6DBF4F06DB98531653D851 /* Pods_adoptme.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_adoptme.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A370876232231B000D1922C /* PetViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PetViewCell.xib; sourceTree = "<group>"; };
+		8A3708782322774F00D1922C /* PetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetController.swift; sourceTree = "<group>"; };
 		8A57B7DC231D6621008F1C8F /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		8A57B7DE231D663A008F1C8F /* MessagesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesController.swift; sourceTree = "<group>"; };
 		8A57B7E0231D7F52008F1C8F /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
@@ -60,7 +65,7 @@
 		8A6AA398231AACFA004CB118 /* TabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabController.swift; sourceTree = "<group>"; };
 		8A6AA39C231AC935004CB118 /* UserDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDto.swift; sourceTree = "<group>"; };
 		8A6AA39F231AC9EE004CB118 /* UserMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMapper.swift; sourceTree = "<group>"; };
-		8A6AA3A1231ACE50004CB118 /* UserDtoExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDtoExt.swift; sourceTree = "<group>"; };
+		8A6AA3A1231ACE50004CB118 /* Commons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commons.swift; sourceTree = "<group>"; };
 		8A6AA3B8231AF28C004CB118 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		8A765060231BDC0400EF8219 /* MenuItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemView.swift; sourceTree = "<group>"; };
 		8A765061231BDC0400EF8219 /* MenuItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuItemView.xib; sourceTree = "<group>"; };
@@ -71,6 +76,7 @@
 		8A76506C231C23AB00EF8219 /* TermsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsController.swift; sourceTree = "<group>"; };
 		8A76506E231C23FD00EF8219 /* LicenseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseController.swift; sourceTree = "<group>"; };
 		8A765070231C2B8F00EF8219 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
+		8AAA78E423218A240084C501 /* PetViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetViewCell.swift; sourceTree = "<group>"; };
 		8AF56D92232046C10085BFB8 /* MViewPager.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MViewPager.xib; sourceTree = "<group>"; };
 		8AF56D94232047060085BFB8 /* MViewPager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MViewPager.swift; sourceTree = "<group>"; };
 		BFB5ECE79A46AE006364D37F /* Pods-adoptme.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-adoptme.debug.xcconfig"; path = "Target Support Files/Pods-adoptme/Pods-adoptme.debug.xcconfig"; sourceTree = "<group>"; };
@@ -182,6 +188,7 @@
 				8A765070231C2B8F00EF8219 /* ProfileController.swift */,
 				8A57B7DC231D6621008F1C8F /* HomeController.swift */,
 				8A57B7DE231D663A008F1C8F /* MessagesController.swift */,
+				8A3708782322774F00D1922C /* PetController.swift */,
 			);
 			path = viewcontroller;
 			sourceTree = "<group>";
@@ -189,7 +196,7 @@
 		8A6AA39B231AC8F7004CB118 /* commons */ = {
 			isa = PBXGroup;
 			children = (
-				8A6AA3A1231ACE50004CB118 /* UserDtoExt.swift */,
+				8A6AA3A1231ACE50004CB118 /* Commons.swift */,
 				8A76506A231C1BD200EF8219 /* Navigation.swift */,
 			);
 			path = commons;
@@ -211,6 +218,8 @@
 				8A765061231BDC0400EF8219 /* MenuItemView.xib */,
 				8AF56D92232046C10085BFB8 /* MViewPager.xib */,
 				8AF56D94232047060085BFB8 /* MViewPager.swift */,
+				8AAA78E423218A240084C501 /* PetViewCell.swift */,
+				8A370876232231B000D1922C /* PetViewCell.xib */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -244,6 +253,9 @@
 		8A6AA3712319A3D1004CB118 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					detailPet,
+				);
 				LastSwiftUpdateCheck = 1030;
 				LastUpgradeCheck = 1030;
 				ORGANIZATIONNAME = "Raul Rodriguez";
@@ -283,6 +295,7 @@
 				8A6AA3822319A3D2004CB118 /* Main.storyboard in Resources */,
 				8A6AA397231A9247004CB118 /* GoogleService-Info.plist in Resources */,
 				8A765063231BDC0400EF8219 /* MenuItemView.xib in Resources */,
+				8A370877232231B000D1922C /* PetViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,7 +368,8 @@
 				8A57B7E1231D7F52008F1C8F /* Record.swift in Sources */,
 				8A57B7E3231D80A2008F1C8F /* Animal.swift in Sources */,
 				8A57B7E9231D83BA008F1C8F /* FirebaseRepository.swift in Sources */,
-				8A6AA3A2231ACE50004CB118 /* UserDtoExt.swift in Sources */,
+				8A3708792322774F00D1922C /* PetController.swift in Sources */,
+				8A6AA3A2231ACE50004CB118 /* Commons.swift in Sources */,
 				8AF56D95232047060085BFB8 /* MViewPager.swift in Sources */,
 				8A76506F231C23FD00EF8219 /* LicenseController.swift in Sources */,
 				8A57B7DD231D6621008F1C8F /* HomeController.swift in Sources */,
@@ -365,6 +379,7 @@
 				8A57B7E5231D80D3008F1C8F /* Sex.swift in Sources */,
 				8A6AA3A0231AC9EE004CB118 /* UserMapper.swift in Sources */,
 				8A765071231C2B8F00EF8219 /* ProfileController.swift in Sources */,
+				8AAA78E623218A240084C501 /* PetViewCell.swift in Sources */,
 				8A57B7ED231D8E50008F1C8F /* RecordMapper.swift in Sources */,
 				8A76506D231C23AB00EF8219 /* TermsController.swift in Sources */,
 				8A6AA399231AACFA004CB118 /* TabController.swift in Sources */,

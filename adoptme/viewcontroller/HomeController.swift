@@ -12,6 +12,7 @@ import Foundation
 class HomeController: UIViewController{
     @IBOutlet weak var scView: UIScrollView!
     
+    @IBOutlet weak var tbView: UICollectionView!
     var animals = [RecordDto]()
     var slides:[MViewPager] = [];
 
@@ -24,9 +25,12 @@ class HomeController: UIViewController{
         scView.alwaysBounceHorizontal = true
         scView.alwaysBounceVertical = false
         FirebaseRepository.getAllRecords(animal: nil){
-            self.animals = $0
-            self.slides = self.createSlides()
-            self.setupSlideScrollView(slides: self.slides)
+            
+        self.animals = $0
+        self.slides = self.createSlides()
+        self.setupSlideScrollView(slides: self.slides)
+        self.tbView.register(UINib(nibName: "PetViewCell", bundle: nil), forCellWithReuseIdentifier: "PetViewCell")
+        self.tbView.reloadData()
         }
     }
     
@@ -60,4 +64,77 @@ class HomeController: UIViewController{
         }
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let petController = segue.destination as? PetController {
+            petController.animal = sender as! RecordDto
+        }
+    }
 }
+
+
+extension HomeController: UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        return animals.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        //Recuperamos una celda de la tabla, si no hay ninguna en memoria se instanciara
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PetViewCell", for: indexPath) as? PetViewCell
+        
+        //Configuramos la celda
+        cell?.configureCell(animal: animals[indexPath.row])
+        
+        return cell ?? UICollectionViewCell()
+    }
+}
+/*
+extension HomeController: UICollectionViewDelegateFlowLayout {
+    
+  /*  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        //Se puede especificar el tamaño de las celdas de manera personalizada
+        return  CGSize(width: 280, height: 280)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        
+        //Los edge insets equivalen al pading en Android
+        return UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+    }*/
+}
+ */
+
+
+extension HomeController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let padding: CGFloat = 25
+
+        let collectionCellSize = collectionView.frame.size.width - padding
+        
+        return CGSize(width: collectionCellSize/2, height: collectionCellSize/2)
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        
+        return UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+    }
+    
+}
+
+extension HomeController: UICollectionViewDelegate {
+   
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "detailPet", sender: animals[indexPath.row])
+    }
+    
+}
+
+
+
+

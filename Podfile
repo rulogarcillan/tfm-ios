@@ -14,5 +14,7 @@ target 'adoptme' do
   pod 'GoogleSignIn'
   pod 'Firebase/Analytics'
   pod 'SDWebImage', '~> 4.0'
+  pod 'MaterialComponents/Cards'
+
 
 end

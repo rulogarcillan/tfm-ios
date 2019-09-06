@@ -138,6 +138,14 @@ PODS:
     - MaterialComponents/Typography
     - MDFInternationalization
     - MDFTextAccessibility
+  - MaterialComponents/Cards (88.1.0):
+    - MaterialComponents/Elevation
+    - MaterialComponents/Ink
+    - MaterialComponents/private/Icons/ic_check_circle
+    - MaterialComponents/private/Math
+    - MaterialComponents/Ripple
+    - MaterialComponents/ShadowLayer
+    - MaterialComponents/Shapes
   - MaterialComponents/Elevation (88.1.0):
     - MaterialComponents/private/Color
     - MaterialComponents/private/Math
@@ -146,6 +154,9 @@ PODS:
     - MaterialComponents/private/Math
   - MaterialComponents/private/Application (88.1.0)
   - MaterialComponents/private/Color (88.1.0)
+  - MaterialComponents/private/Icons/Base (88.1.0)
+  - MaterialComponents/private/Icons/ic_check_circle (88.1.0):
+    - MaterialComponents/private/Icons/Base
   - MaterialComponents/private/Math (88.1.0)
   - MaterialComponents/Ripple (88.1.0):
     - MaterialComponents/AnimationTiming
@@ -180,6 +191,7 @@ DEPENDENCIES:
   - Firebase/Firestore
   - GoogleSignIn
   - MaterialComponents/Buttons
+  - MaterialComponents/Cards
   - SDWebImage (~> 4.0)
 
 SPEC REPOS:
@@ -241,6 +253,6 @@ SPEC CHECKSUMS:
   Protobuf: 1097ca58584c8d9be81bfbf2c5ff5975648dd87a
   SDWebImage: c10d14a8883ebd89664f02a422006f66a85c0c5d
 
-PODFILE CHECKSUM: 94674ad3c220f9ff334aa584aa690bcfbd286657
+PODFILE CHECKSUM: 01ac432aafac8f59b9553557919ed577cb48359e
 
 COCOAPODS: 1.7.5

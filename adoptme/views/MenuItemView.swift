@@ -17,6 +17,8 @@ class MenuItemView: UITableViewCell {
     func configureCell(item: ItemProfileMenu) {
        ivIcon.image = UIImage(named: item.icon)
        lbTitle.text = item.text
+       ivIcon.image = ivIcon.image?.withRenderingMode(.alwaysTemplate)
+
     }
 }
 
