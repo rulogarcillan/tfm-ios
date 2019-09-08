@@ -7,9 +7,14 @@
 //
 
 import UIKit
+import MaterialComponents
 
 class PetController: UIViewController {
 
+    @IBOutlet weak var lbSex: UILabel!
+    
+    @IBOutlet weak var lbPetName: UILabel!
+    @IBOutlet weak var lbAge: UILabel!
     @IBOutlet weak var navigationBar: UINavigationItem!
     @IBOutlet weak var back: UIBarButtonItem!
     @IBOutlet weak var imgProfile: UIImageView!
@@ -17,22 +22,43 @@ class PetController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     var position = 0
     weak var timer: Timer?
+    @IBOutlet weak var btnActions: MDCRaisedButton!
     
     var animal: RecordDto = RecordDto()
+    var userDto :UserDto? = nil
+    var userPet :UserDto? = nil
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print(animal.name)
         navigationBar.title=animal.name
         
-        let userDto = Commons.readUserInMemory()
-        
-        lbNAme.text = userDto.name
+        userDto = Commons.readUserInMemory()
        
-        imgProfile.sd_setImage(with: URL(string: userDto.photoUrl))
+        FirebaseRepository.getUserDataBase(userId: animal.uid){userPet in
+            self.userPet = userPet
+            self.lbNAme.text = userPet.name
+            self.imgProfile.sd_setImage(with: URL(string: userPet.photoUrl))
+            
+            if self.userDto?.uid.elementsEqual(userPet.uid) ?? false{
+                self.btnActions.setTitle("Remove add", for: .normal) // sets text
+            }else{
+                self.btnActions.setTitle("Send me a message", for: .normal) // sets text
+            }
+        }
+        
+        
+        if (animal.isDeleted){
+            btnActions.isHidden = true
+        }
         
         imgProfile.layer.cornerRadius = 32;
         startTimer()
+        
+        lbPetName.text = animal.name
+        lbAge.text = String(animal.age)
+        lbSex.text = animal.sex
 
     }
     
@@ -40,6 +66,19 @@ class PetController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func brActionClick(_ sender: Any) {
+        
+        if self.userDto?.uid.elementsEqual(userPet?.uid ?? "") ?? false{
+            //delete add
+            FirebaseRepository.deleteRecord(record: animal)
+            dismiss(animated: true, completion: nil)
+            
+        }else{
+            let chatId = userDto?.uid.sortCombine(uid2: userPet?.uid ?? "")
+            print(chatId)
+        }
+        
+    }
     
     
     func initImager() {

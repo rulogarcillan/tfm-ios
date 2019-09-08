@@ -44,3 +44,11 @@ final class Commons {
     
 }
 
+extension String{
+    func sortCombine(uid2 : String) -> String {
+        var list = [self, uid2]
+        list.sort()
+        return  list[0] + "-" + list[1]
+    }
+}
+

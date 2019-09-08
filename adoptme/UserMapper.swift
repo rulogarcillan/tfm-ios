@@ -23,6 +23,17 @@ extension AuthDataResult{
     }
 }
 
+extension User{    
+    func toUserDto() -> UserDto {
+        return UserDto( uid: self.uid,
+                        name: self.name ,
+                        email: self.email ,
+                        photoUrl: self.photoUrl ,
+                        emailVerified: self.emailVerified,
+                        description: "",
+                        zip: "")
+    }
+}
 
 
 

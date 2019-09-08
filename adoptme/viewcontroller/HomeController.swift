@@ -21,16 +21,25 @@ class HomeController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
        
+     
+    }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        
         FirebaseRepository.getAllRecords(animal: nil){
             
-        self.animals = $0
-        self.animalsFive = self.createSlides()
-        self.tbView.register(UINib(nibName: "PetViewCell", bundle: nil), forCellWithReuseIdentifier: "PetViewCell")
-        self.tbView.reloadData()
-        self.tbViewPager.reloadData()
-        self.startTimer()
+            self.animals = $0
+            self.animalsFive = self.createSlides()
+            self.tbView.register(UINib(nibName: "PetViewCell", bundle: nil), forCellWithReuseIdentifier: "PetViewCell")
+            self.tbView.reloadData()
+            self.tbViewPager.reloadData()
+            self.startTimer()
         }
+        
     }
+
     
     func initImager() {
                

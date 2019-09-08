@@ -25,7 +25,7 @@ final class FirebaseRepository {
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {
-                if var data = querySnapshot?.documents.flatMap({
+                if let data = querySnapshot?.documents.compactMap({
                     $0.data().flatMap({ (data) in
                         return Record(dictionary: data)
                     })
@@ -40,5 +40,28 @@ final class FirebaseRepository {
     }
     
     
+     static func getUserDataBase(userId: String, completion: @escaping (_ result: UserDto)->()) {
+        
+        Firestore.firestore().collection("users").document(userId).getDocument() {
+            (querySnapshot, err) in
+                if let err = err {
+                    print("Error getting documents: \(err)")
+                } else {
+                    if let data: User = User(dictionary: (querySnapshot?.data())!)  {
+                       print(data.toUserDto())
+                       completion(data.toUserDto())
+                    }else{
+                        print("Document does not exist")
+                    }
+               }
+        }
+    }
     
+    
+    static func deleteRecord(record: RecordDto) {
+        let docRef = Firestore.firestore().collection("records").document(record.id)
+        docRef.updateData(["deleted": true])
+    }
+    
+
 }
