@@ -216,7 +216,7 @@
                     <connections>
                         <outlet property="tbView" destination="zwo-x1-EN8" id="wPJ-z1-Ad0"/>
                         <outlet property="tbViewPager" destination="Rp1-lU-kNx" id="6sq-cy-Lgu"/>
-                        <segue destination="AJs-fA-hAu" kind="show" identifier="detailPet" id="bDI-9X-8TD"/>
+                        <segue destination="AJs-fA-hAu" kind="show" identifier="detailPet" id="d8E-gp-ivu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aMh-2F-FfO" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -406,21 +406,41 @@
                         <outlet property="lbPetName" destination="LjN-1z-1If" id="bjP-a7-mmF"/>
                         <outlet property="lbSex" destination="QCn-2Q-ba7" id="pGD-fS-rMf"/>
                         <outlet property="navigationBar" destination="MMz-5Y-b9h" id="kVa-Md-cg6"/>
-                        <segue destination="At3-pO-eTs" kind="presentation" id="bWh-Rm-053"/>
+                        <segue destination="At3-pO-eTs" kind="show" identifier="ChatSegue" id="GmH-Cc-Xkf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nJ1-fH-GmX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2324.6376811594205" y="-458.1521739130435"/>
         </scene>
-        <!--View Controller-->
+        <!--Chat View Controller-->
         <scene sceneID="hdD-ia-KzI">
             <objects>
-                <viewController id="At3-pO-eTs" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChatViewController" id="At3-pO-eTs" customClass="ChatViewController" customModule="adoptme" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uhO-zX-MJP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F6H-pi-mHC">
+                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <navigationItem title="Chat" id="qwn-gp-mnf">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" image="back" style="plain" id="Riz-bx-8Ab">
+                                            <connections>
+                                                <action selector="back:" destination="At3-pO-eTs" id="u8b-Pb-1EX"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="F6H-pi-mHC" firstAttribute="trailing" secondItem="pjz-eY-thr" secondAttribute="trailing" id="6vF-rb-J3v"/>
+                            <constraint firstItem="F6H-pi-mHC" firstAttribute="leading" secondItem="pjz-eY-thr" secondAttribute="leading" id="ZCr-pb-n9z"/>
+                            <constraint firstItem="F6H-pi-mHC" firstAttribute="top" secondItem="pjz-eY-thr" secondAttribute="top" id="ucb-bl-2vX"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="pjz-eY-thr"/>
                     </view>
                 </viewController>

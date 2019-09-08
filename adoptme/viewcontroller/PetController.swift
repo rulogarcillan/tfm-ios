@@ -62,6 +62,12 @@ class PetController: UIViewController {
 
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let chatController = segue.destination as? ChatViewController {
+            chatController.chatId = sender as! String
+        }
+    }
+    
     @IBAction func clickBack(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
@@ -75,7 +81,7 @@ class PetController: UIViewController {
             
         }else{
             let chatId = userDto?.uid.sortCombine(uid2: userPet?.uid ?? "")
-            print(chatId)
+            performSegue(withIdentifier: "ChatSegue", sender: chatId)
         }
         
     }
