@@ -63,5 +63,15 @@ final class FirebaseRepository {
         docRef.updateData(["deleted": true])
     }
     
+    static func sendMessage(chatId: String, msg: MessageDto) {
+        var map = [String: String]()
+        map["dummy"] = "dummy"
+        
+        Firestore.firestore().collection("chats").document(chatId).setData(map)
+        Firestore.firestore().collection("chats").document(chatId).collection(chatId).addDocument(data: msg.toDict())
+        
+
+
+    }
 
 }

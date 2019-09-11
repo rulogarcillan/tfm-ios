@@ -31,7 +31,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ab-2R-VgR" customClass="MDCButton">
-                                        <rect key="frame" x="20" y="108.33333333333331" width="374" height="29"/>
+                                        <rect key="frame" x="20" y="107.66666666666669" width="374" height="30"/>
                                         <color key="backgroundColor" red="0.34677977493636669" green="0.59121227378435681" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Sign in with Google">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -434,19 +434,67 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sl1-hP-i2a" customClass="MDCTextField">
+                                <rect key="frame" x="10" y="687" width="320.66666666666669" height="49"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zfq-6V-uMT">
+                                <rect key="frame" x="338.66666666666669" y="687" width="65.333333333333314" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="zfq-6V-uMT" secondAttribute="height" multiplier="4:3" id="9qQ-JG-bOf"/>
+                                </constraints>
+                                <state key="normal" title="SEND"/>
+                                <connections>
+                                    <action selector="sendMessage:" destination="At3-pO-eTs" eventType="touchUpInside" id="qmZ-qI-BHC"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vAu-bt-kv7">
+                                <rect key="frame" x="0.0" y="64" width="414" height="608"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="tHH-Rp-iGd">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tHH-Rp-iGd" id="aGc-Lg-Ehz">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="At3-pO-eTs" id="Nx1-zn-3ta"/>
+                                    <outlet property="delegate" destination="At3-pO-eTs" id="jkY-Jw-YSc"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="zfq-6V-uMT" firstAttribute="leading" secondItem="Sl1-hP-i2a" secondAttribute="trailing" constant="8" id="21g-RH-QjA"/>
+                            <constraint firstItem="zfq-6V-uMT" firstAttribute="bottom" secondItem="pjz-eY-thr" secondAttribute="bottom" id="59c-I4-N0g"/>
                             <constraint firstItem="F6H-pi-mHC" firstAttribute="trailing" secondItem="pjz-eY-thr" secondAttribute="trailing" id="6vF-rb-J3v"/>
+                            <constraint firstItem="vAu-bt-kv7" firstAttribute="leading" secondItem="pjz-eY-thr" secondAttribute="leading" id="FWI-k6-TGR"/>
+                            <constraint firstItem="Sl1-hP-i2a" firstAttribute="bottom" secondItem="pjz-eY-thr" secondAttribute="bottom" id="Fhp-lo-Z3W"/>
+                            <constraint firstItem="zfq-6V-uMT" firstAttribute="centerY" secondItem="Sl1-hP-i2a" secondAttribute="centerY" id="IrW-My-9UH"/>
                             <constraint firstItem="F6H-pi-mHC" firstAttribute="leading" secondItem="pjz-eY-thr" secondAttribute="leading" id="ZCr-pb-n9z"/>
+                            <constraint firstItem="vAu-bt-kv7" firstAttribute="top" secondItem="F6H-pi-mHC" secondAttribute="bottom" id="eiw-9T-Ots"/>
+                            <constraint firstItem="pjz-eY-thr" firstAttribute="trailing" secondItem="zfq-6V-uMT" secondAttribute="trailing" constant="10" id="hK6-we-1Ux"/>
+                            <constraint firstItem="Sl1-hP-i2a" firstAttribute="top" secondItem="vAu-bt-kv7" secondAttribute="bottom" constant="15" id="j9J-AV-YAD"/>
                             <constraint firstItem="F6H-pi-mHC" firstAttribute="top" secondItem="pjz-eY-thr" secondAttribute="top" id="ucb-bl-2vX"/>
+                            <constraint firstItem="Sl1-hP-i2a" firstAttribute="leading" secondItem="pjz-eY-thr" secondAttribute="leading" constant="10" id="xf6-8Q-FH7"/>
+                            <constraint firstItem="vAu-bt-kv7" firstAttribute="trailing" secondItem="pjz-eY-thr" secondAttribute="trailing" id="xll-3Z-JkW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pjz-eY-thr"/>
                     </view>
+                    <connections>
+                        <outlet property="msgBox" destination="Sl1-hP-i2a" id="mkH-ru-SoF"/>
+                        <outlet property="tableChat" destination="vAu-bt-kv7" id="gdi-PC-pim"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E5V-Co-Kn3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3180" y="-458"/>
+            <point key="canvasLocation" x="3179.7101449275365" y="-458.1521739130435"/>
         </scene>
         <!--Tab Controller-->
         <scene sceneID="I43-5N-vHx">

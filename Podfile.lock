@@ -152,6 +152,7 @@ PODS:
   - MaterialComponents/Ink (88.1.0):
     - MaterialComponents/private/Color
     - MaterialComponents/private/Math
+  - MaterialComponents/Palettes (88.1.0)
   - MaterialComponents/private/Application (88.1.0)
   - MaterialComponents/private/Color (88.1.0)
   - MaterialComponents/private/Icons/Base (88.1.0)
@@ -169,6 +170,13 @@ PODS:
     - MaterialComponents/private/Color
     - MaterialComponents/private/Math
     - MaterialComponents/ShadowLayer
+  - MaterialComponents/TextFields (88.1.0):
+    - MaterialComponents/AnimationTiming
+    - MaterialComponents/Elevation
+    - MaterialComponents/Palettes
+    - MaterialComponents/private/Math
+    - MaterialComponents/Typography
+    - MDFInternationalization
   - MaterialComponents/Typography (88.1.0):
     - MaterialComponents/private/Application
     - MaterialComponents/private/Math
@@ -192,6 +200,7 @@ DEPENDENCIES:
   - GoogleSignIn
   - MaterialComponents/Buttons
   - MaterialComponents/Cards
+  - MaterialComponents/TextFields
   - SDWebImage (~> 4.0)
 
 SPEC REPOS:
@@ -253,6 +262,6 @@ SPEC CHECKSUMS:
   Protobuf: 1097ca58584c8d9be81bfbf2c5ff5975648dd87a
   SDWebImage: c10d14a8883ebd89664f02a422006f66a85c0c5d
 
-PODFILE CHECKSUM: 01ac432aafac8f59b9553557919ed577cb48359e
+PODFILE CHECKSUM: 91277ef68d6bdff8c41d3fe6d680adf35c0ada7f
 
 COCOAPODS: 1.7.5

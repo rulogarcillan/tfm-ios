@@ -64,7 +64,12 @@ class PetController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let chatController = segue.destination as? ChatViewController {
-            chatController.chatId = sender as! String
+            
+            let list: Array<Any> = sender as! Array
+            
+            chatController.chatId = list[0] as! String
+            chatController.he = list[1] as! UserDto
+
         }
     }
     
@@ -81,7 +86,7 @@ class PetController: UIViewController {
             
         }else{
             let chatId = userDto?.uid.sortCombine(uid2: userPet?.uid ?? "")
-            performSegue(withIdentifier: "ChatSegue", sender: chatId)
+            performSegue(withIdentifier: "ChatSegue", sender: [chatId, userPet])
         }
         
     }

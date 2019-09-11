@@ -15,6 +15,7 @@ target 'adoptme' do
   pod 'Firebase/Analytics'
   pod 'SDWebImage', '~> 4.0'
   pod 'MaterialComponents/Cards'
+  pod 'MaterialComponents/TextFields'
 
 
 end

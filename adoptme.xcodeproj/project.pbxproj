@@ -38,6 +38,13 @@
 		8A76506F231C23FD00EF8219 /* LicenseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A76506E231C23FD00EF8219 /* LicenseController.swift */; };
 		8A765071231C2B8F00EF8219 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A765070231C2B8F00EF8219 /* ProfileController.swift */; };
 		8A8EF31B2322C57A00FC929C /* PetImageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8EF31A2322C57A00FC929C /* PetImageViewCell.swift */; };
+		8AA21DF62326842D00978F40 /* BubleChatViewReciver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA21DF42326842D00978F40 /* BubleChatViewReciver.swift */; };
+		8AA21DF72326842D00978F40 /* BubleChatViewReciver.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AA21DF52326842D00978F40 /* BubleChatViewReciver.xib */; };
+		8AA21DFA232788BB00978F40 /* BubbleChatViewIncome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA21DF8232788BB00978F40 /* BubbleChatViewIncome.swift */; };
+		8AA21DFB232788BB00978F40 /* BubbleChatViewIncome.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AA21DF9232788BB00978F40 /* BubbleChatViewIncome.xib */; };
+		8AA21DFD2327E69800978F40 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA21DFC2327E69800978F40 /* Message.swift */; };
+		8AA21DFF2328E5FF00978F40 /* MessageDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA21DFE2328E5FF00978F40 /* MessageDto.swift */; };
+		8AA21E012328E6C400978F40 /* MessageMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA21E002328E6C400978F40 /* MessageMapper.swift */; };
 		8AAA78E623218A240084C501 /* PetViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAA78E423218A240084C501 /* PetViewCell.swift */; };
 		D246481AEFD22B1167F0C2BF /* Pods_adoptme.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D6DBF4F06DB98531653D851 /* Pods_adoptme.framework */; };
 /* End PBXBuildFile section */
@@ -80,6 +87,13 @@
 		8A76506E231C23FD00EF8219 /* LicenseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseController.swift; sourceTree = "<group>"; };
 		8A765070231C2B8F00EF8219 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		8A8EF31A2322C57A00FC929C /* PetImageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetImageViewCell.swift; sourceTree = "<group>"; };
+		8AA21DF42326842D00978F40 /* BubleChatViewReciver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubleChatViewReciver.swift; sourceTree = "<group>"; };
+		8AA21DF52326842D00978F40 /* BubleChatViewReciver.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BubleChatViewReciver.xib; sourceTree = "<group>"; };
+		8AA21DF8232788BB00978F40 /* BubbleChatViewIncome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleChatViewIncome.swift; sourceTree = "<group>"; };
+		8AA21DF9232788BB00978F40 /* BubbleChatViewIncome.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BubbleChatViewIncome.xib; sourceTree = "<group>"; };
+		8AA21DFC2327E69800978F40 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		8AA21DFE2328E5FF00978F40 /* MessageDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDto.swift; sourceTree = "<group>"; };
+		8AA21E002328E6C400978F40 /* MessageMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageMapper.swift; sourceTree = "<group>"; };
 		8AAA78E423218A240084C501 /* PetViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetViewCell.swift; sourceTree = "<group>"; };
 		BFB5ECE79A46AE006364D37F /* Pods-adoptme.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-adoptme.debug.xcconfig"; path = "Target Support Files/Pods-adoptme/Pods-adoptme.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -176,6 +190,8 @@
 				8A57B7E4231D80D3008F1C8F /* Sex.swift */,
 				8A57B7EA231D8DFC008F1C8F /* RecordDto.swift */,
 				8A764F6F2325617800E6649A /* User.swift */,
+				8AA21DFC2327E69800978F40 /* Message.swift */,
+				8AA21DFE2328E5FF00978F40 /* MessageDto.swift */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -211,6 +227,7 @@
 			children = (
 				8A6AA39F231AC9EE004CB118 /* UserMapper.swift */,
 				8A57B7EC231D8E50008F1C8F /* RecordMapper.swift */,
+				8AA21E002328E6C400978F40 /* MessageMapper.swift */,
 			);
 			name = mappers;
 			sourceTree = "<group>";
@@ -223,6 +240,10 @@
 				8AAA78E423218A240084C501 /* PetViewCell.swift */,
 				8A370876232231B000D1922C /* PetViewCell.xib */,
 				8A8EF31A2322C57A00FC929C /* PetImageViewCell.swift */,
+				8AA21DF42326842D00978F40 /* BubleChatViewReciver.swift */,
+				8AA21DF52326842D00978F40 /* BubleChatViewReciver.xib */,
+				8AA21DF8232788BB00978F40 /* BubbleChatViewIncome.swift */,
+				8AA21DF9232788BB00978F40 /* BubbleChatViewIncome.xib */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -293,12 +314,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AA21DFB232788BB00978F40 /* BubbleChatViewIncome.xib in Resources */,
 				8A6AA3872319A3D4004CB118 /* LaunchScreen.storyboard in Resources */,
 				8A6AA3842319A3D4004CB118 /* Assets.xcassets in Resources */,
 				8A6AA3822319A3D2004CB118 /* Main.storyboard in Resources */,
 				8A6AA397231A9247004CB118 /* GoogleService-Info.plist in Resources */,
 				8A765063231BDC0400EF8219 /* MenuItemView.xib in Resources */,
 				8A370877232231B000D1922C /* PetViewCell.xib in Resources */,
+				8AA21DF72326842D00978F40 /* BubleChatViewReciver.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,18 +393,23 @@
 			files = (
 				8A57B7E1231D7F52008F1C8F /* Record.swift in Sources */,
 				8A57B7E3231D80A2008F1C8F /* Animal.swift in Sources */,
+				8AA21DFA232788BB00978F40 /* BubbleChatViewIncome.swift in Sources */,
 				8A57B7E9231D83BA008F1C8F /* FirebaseRepository.swift in Sources */,
+				8AA21DFD2327E69800978F40 /* Message.swift in Sources */,
 				8A764F702325617800E6649A /* User.swift in Sources */,
+				8AA21E012328E6C400978F40 /* MessageMapper.swift in Sources */,
 				8A3708792322774F00D1922C /* PetController.swift in Sources */,
 				8A6AA3A2231ACE50004CB118 /* Commons.swift in Sources */,
 				8A76506F231C23FD00EF8219 /* LicenseController.swift in Sources */,
 				8A57B7DD231D6621008F1C8F /* HomeController.swift in Sources */,
 				8A6AA37F2319A3D2004CB118 /* LoginController.swift in Sources */,
+				8AA21DFF2328E5FF00978F40 /* MessageDto.swift in Sources */,
 				8A765065231BE2D700EF8219 /* ItemProfileMenu.swift in Sources */,
 				8A57B7DF231D663A008F1C8F /* MessagesController.swift in Sources */,
 				8A57B7E5231D80D3008F1C8F /* Sex.swift in Sources */,
 				8A6AA3A0231AC9EE004CB118 /* UserMapper.swift in Sources */,
 				8A765071231C2B8F00EF8219 /* ProfileController.swift in Sources */,
+				8AA21DF62326842D00978F40 /* BubleChatViewReciver.swift in Sources */,
 				8A8EF31B2322C57A00FC929C /* PetImageViewCell.swift in Sources */,
 				8AAA78E623218A240084C501 /* PetViewCell.swift in Sources */,
 				8A57B7ED231D8E50008F1C8F /* RecordMapper.swift in Sources */,
