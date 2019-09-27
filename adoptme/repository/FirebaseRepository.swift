@@ -59,8 +59,19 @@ final class FirebaseRepository {
     
     
     static func deleteRecord(record: RecordDto) {
-        let docRef = Firestore.firestore().collection("records").document(record.id)
-        docRef.updateData(["deleted": true])
+      
+         let pet = Firestore.firestore().collection("records").document(record.id)
+
+              // Set the "capital" field of the city 'DC'
+              pet.updateData([
+                  "deleted": true
+              ]) { err in
+                  if let err = err {
+                      print("Error updating document: \(err)")
+                  } else {
+                      print("Document successfully updated")
+                  }
+              }
     }
     
     static func sendMessage(chatId: String, msg: MessageDto) {
