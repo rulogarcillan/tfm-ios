@@ -80,12 +80,20 @@ class HomeController: UIViewController{
    
     func createSlides() -> [RecordDto] {
         
-        let size = animals.count > 5 ? 5 : animals.count
         var mSlides:[RecordDto] = [];
-        for i in 0...size-1 {
-            mSlides.append(animals[i])
+       
+        
+        if (animals.count > 5) {
+            for _ in 1...5 {
+                var item = animals.randomElement()
+                while (mSlides.contains(item!)) {
+                    item = animals.randomElement()
+                }
+                mSlides.append(item!)
+            }
+        } else {
+            mSlides.append(contentsOf: animals)
         }
-
         return mSlides
     }
 
@@ -165,7 +173,15 @@ extension HomeController: UICollectionViewDelegateFlowLayout {
 
 extension HomeController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "detailPet", sender: animals[indexPath.row])
+        
+        
+        if (collectionView.restorationIdentifier == "imagePets"){
+            performSegue(withIdentifier: "detailPet", sender: animalsFive[indexPath.row])
+        }else{
+            performSegue(withIdentifier: "detailPet", sender: animals[indexPath.row])
+        }
+        
+      
     }
 }
 

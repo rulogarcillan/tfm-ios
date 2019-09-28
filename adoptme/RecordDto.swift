@@ -8,7 +8,12 @@
 
 import Foundation
 
-struct RecordDto: Codable {
+struct RecordDto: Codable, Equatable, Comparable {
+   
+    static func < (lhs: RecordDto, rhs: RecordDto) -> Bool {
+        lhs.id == rhs.id
+    }
+    
     var id: String = NSUUID().uuidString.lowercased()
     var uid: String = ""
     var animal: String = Animal.DOG.rawValue

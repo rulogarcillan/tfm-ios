@@ -16,6 +16,7 @@ target 'adoptme' do
   pod 'SDWebImage', '~> 4.0'
   pod 'MaterialComponents/Cards'
   pod 'MaterialComponents/TextFields'
+  pod 'DLRadioButton', '~> 1.4'
 
 
 end
