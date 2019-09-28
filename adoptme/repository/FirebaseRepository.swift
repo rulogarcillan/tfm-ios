@@ -80,9 +80,27 @@ final class FirebaseRepository {
         
         Firestore.firestore().collection("chats").document(chatId).setData(map)
         Firestore.firestore().collection("chats").document(chatId).collection(chatId).addDocument(data: msg.toDict())
-        
-
-
     }
 
+    
+    static func getUserChats(userId: String, completion: @escaping (_ result: [String])->()){
+        
+        var idsUser : [String] = []
+        Firestore.firestore().collection("chats").getDocuments() {
+            (querySnapshot, err) in
+            
+            querySnapshot?.documents.filter{ it in
+                it.documentID.contains(userId)
+            }.forEach { element in
+               
+                let id :String = String(element.documentID.split(separator: "-").filter({ids in !ids.contains(userId)}).first ?? "")
+                    idsUser.append(id)
+                }
+            
+            completion(idsUser)
+            
+            
+        }
+    }
+    
 }

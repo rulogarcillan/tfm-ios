@@ -33,5 +33,17 @@ final class Navigation {
         ui.present(newViewController, animated: true, completion: nil)
     }
     
+    static func navigationToChangelog(ui: UIViewController) {
+        let newViewController = ui.storyboard?.instantiateViewController(withIdentifier: "ChangelogViewController") as! ChangelogViewController
+        ui.present(newViewController, animated: true, completion: nil)
+    }
+    
+    
+    static func navigationToProfile(ui: UIViewController) {
+        let newViewController = ui.storyboard?.instantiateViewController(withIdentifier: "ProfileController") as! ProfileController
+        ui.present(newViewController, animated: true, completion: nil)
+    }
+    
+    
 }
 

@@ -23,6 +23,12 @@ class ProfileViewController: UIViewController {
         navigationController?.navigationBar.barStyle = .black
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        if let index = self.tableMenu.indexPathForSelectedRow{
+            self.tableMenu.deselectRow(at: index, animated: true)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -90,7 +96,7 @@ extension ProfileViewController: UITableViewDelegate{
             Commons.saveUserInMemory(user: UserDto())
             Navigation.navigateToLogin(ui: self)
         }else if (item.text == "Personal Data"){
-            
+            Navigation.navigationToProfile(ui: self)
         }
         else if (item.text == "Terms & Condition"){
             Navigation.navigationToTerms(ui: self)
@@ -100,7 +106,7 @@ extension ProfileViewController: UITableViewDelegate{
               Navigation.navigationToLicense(ui: self)
             
         }else if (item.text == "Changelog"){
-            
+               Navigation.navigationToChangelog(ui: self)
         }
     }
     

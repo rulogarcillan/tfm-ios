@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleAspectFill" selectionStyle="default" indentationWidth="10" translatesAutoresizingMaskIntoConstraints="NO" id="KGk-i7-Jjw" customClass="ChatViewCell" customModule="adoptme" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="385" height="100"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="385" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="eoq-Vg-i0s">
+                        <rect key="frame" x="9" y="-11" width="104" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </stackView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Raúl Rodríguez" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y5P-iO-A81">
+                        <rect key="frame" x="92" y="41.5" width="104" height="17"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pDn-e3-oqd">
+                        <rect key="frame" x="20" y="18" width="64" height="64"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="64" id="3zy-Wp-OeU"/>
+                            <constraint firstAttribute="width" constant="64" id="pG7-aD-4YL"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Y5P-iO-A81" firstAttribute="leading" secondItem="pDn-e3-oqd" secondAttribute="trailing" constant="8" id="4hN-Ji-j0z"/>
+                    <constraint firstItem="pDn-e3-oqd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="4nw-MY-Ww1"/>
+                    <constraint firstItem="Y5P-iO-A81" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Oje-jI-xNc"/>
+                    <constraint firstItem="pDn-e3-oqd" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="pLY-0e-Vf9"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="imgProfile" destination="pDn-e3-oqd" id="0JU-qy-g44"/>
+                <outlet property="tvName" destination="Y5P-iO-A81" id="kIS-Xh-w25"/>
+            </connections>
+            <point key="canvasLocation" x="-739.85507246376812" y="129.91071428571428"/>
+        </tableViewCell>
+    </objects>
+</document>

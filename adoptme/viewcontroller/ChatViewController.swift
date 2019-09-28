@@ -41,6 +41,8 @@ class ChatViewController: UIViewController {
             msgBox.text = ""
         }
     }
+    
+    
 
     func initChat(chatId: String) {
       let  docRef = Firestore.firestore().collection("chats").document(chatId).collection(chatId)

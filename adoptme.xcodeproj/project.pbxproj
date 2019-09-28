@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		8A370877232231B000D1922C /* PetViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A370876232231B000D1922C /* PetViewCell.xib */; };
 		8A3708792322774F00D1922C /* PetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3708782322774F00D1922C /* PetController.swift */; };
+		8A4C5318233F6A8500FA4FD1 /* ChatViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4C5316233F6A8500FA4FD1 /* ChatViewCell.swift */; };
+		8A4C5319233F6A8500FA4FD1 /* ChatViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A4C5317233F6A8500FA4FD1 /* ChatViewCell.xib */; };
+		8A4C531B233FAD8700FA4FD1 /* ChangelogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4C531A233FAD8700FA4FD1 /* ChangelogViewController.swift */; };
 		8A4E3B9C232572000065B066 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4E3B9B232572000065B066 /* ChatViewController.swift */; };
 		8A57B7DD231D6621008F1C8F /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A57B7DC231D6621008F1C8F /* HomeController.swift */; };
 		8A57B7DF231D663A008F1C8F /* MessagesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A57B7DE231D663A008F1C8F /* MessagesController.swift */; };
@@ -54,6 +57,9 @@
 		7D6DBF4F06DB98531653D851 /* Pods_adoptme.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_adoptme.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A370876232231B000D1922C /* PetViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PetViewCell.xib; sourceTree = "<group>"; };
 		8A3708782322774F00D1922C /* PetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetController.swift; sourceTree = "<group>"; };
+		8A4C5316233F6A8500FA4FD1 /* ChatViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewCell.swift; sourceTree = "<group>"; };
+		8A4C5317233F6A8500FA4FD1 /* ChatViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatViewCell.xib; sourceTree = "<group>"; };
+		8A4C531A233FAD8700FA4FD1 /* ChangelogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangelogViewController.swift; sourceTree = "<group>"; };
 		8A4E3B9B232572000065B066 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		8A57B7DC231D6621008F1C8F /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		8A57B7DE231D663A008F1C8F /* MessagesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesController.swift; sourceTree = "<group>"; };
@@ -209,6 +215,7 @@
 				8A57B7DE231D663A008F1C8F /* MessagesController.swift */,
 				8A3708782322774F00D1922C /* PetController.swift */,
 				8A4E3B9B232572000065B066 /* ChatViewController.swift */,
+				8A4C531A233FAD8700FA4FD1 /* ChangelogViewController.swift */,
 			);
 			path = viewcontroller;
 			sourceTree = "<group>";
@@ -244,6 +251,8 @@
 				8AA21DF52326842D00978F40 /* BubleChatViewReciver.xib */,
 				8AA21DF8232788BB00978F40 /* BubbleChatViewIncome.swift */,
 				8AA21DF9232788BB00978F40 /* BubbleChatViewIncome.xib */,
+				8A4C5316233F6A8500FA4FD1 /* ChatViewCell.swift */,
+				8A4C5317233F6A8500FA4FD1 /* ChatViewCell.xib */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -319,6 +328,7 @@
 				8A6AA3842319A3D4004CB118 /* Assets.xcassets in Resources */,
 				8A6AA3822319A3D2004CB118 /* Main.storyboard in Resources */,
 				8A6AA397231A9247004CB118 /* GoogleService-Info.plist in Resources */,
+				8A4C5319233F6A8500FA4FD1 /* ChatViewCell.xib in Resources */,
 				8A765063231BDC0400EF8219 /* MenuItemView.xib in Resources */,
 				8A370877232231B000D1922C /* PetViewCell.xib in Resources */,
 				8AA21DF72326842D00978F40 /* BubleChatViewReciver.xib in Resources */,
@@ -399,8 +409,10 @@
 				8A764F702325617800E6649A /* User.swift in Sources */,
 				8AA21E012328E6C400978F40 /* MessageMapper.swift in Sources */,
 				8A3708792322774F00D1922C /* PetController.swift in Sources */,
+				8A4C5318233F6A8500FA4FD1 /* ChatViewCell.swift in Sources */,
 				8A6AA3A2231ACE50004CB118 /* Commons.swift in Sources */,
 				8A76506F231C23FD00EF8219 /* LicenseController.swift in Sources */,
+				8A4C531B233FAD8700FA4FD1 /* ChangelogViewController.swift in Sources */,
 				8A57B7DD231D6621008F1C8F /* HomeController.swift in Sources */,
 				8A6AA37F2319A3D2004CB118 /* LoginController.swift in Sources */,
 				8AA21DFF2328E5FF00978F40 /* MessageDto.swift in Sources */,
